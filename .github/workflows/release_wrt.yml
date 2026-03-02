@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: Release WRT
 run-name: Release - ${{ inputs.model }}
 
