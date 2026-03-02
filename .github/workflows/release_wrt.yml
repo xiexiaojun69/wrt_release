@@ -54,8 +54,11 @@ jobs:
           sudo -E apt -yqq clean
           sudo -E systemctl daemon-reload
 
-      - name: Checkout
+      - name: Checkout code and submodules
         uses: actions/checkout@v6.0.2
+        with:
+              submodules: recursive
+              ssh-strict: false
 
       - name: Set Build Date and Timezone
         run: |
